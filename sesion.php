@@ -47,6 +47,7 @@ if ($result->num_rows > 0) {
 }    
 */
 
+$location = "listaLibros.php";
 header('Location:' . $location .'');
 
 ?>
