@@ -2,37 +2,11 @@
 session_start();
 ?>
 
-<?php include 'conexion.php';?>
-
+<?php 
+//include 'conexion.php';?>
 <?php
 
 
-// $mysqli = new mysqli("localhost", "biblio", "biblio", "biblioteca");
-// if($mysqli->connect_error) {
-//   exit('Could not connect');
-// }
-// $usuario = $_GET['usuario'];
-// $password = $_GET['password'];
-
-// $sql = "SELECT tipo FROM usuarios where usuario = ? and password = ?";
-
-
-// $stmt = $mysqli->prepare($sql);
-// $stmt->bind_param("ss",$_GET['usuario'], $_GET['password']);
-// $stmt->execute();
-// $stmt->store_result();
-// $stmt->bind_result($resultado);
-// $stmt->fetch();
-// $stmt->close();
-
-// if ($resultado!=null && $resultado!=""){
-
-//     $_SESSION['usuario'] = $usuario;
-//     $_SESSION['tipo'] = $resultado;
-//     echo $resultado;
-
-
-// }
 
 
 $usuario = $_REQUEST['usuario'];
@@ -41,12 +15,11 @@ $password = $_REQUEST['password'];
 echo "USUARIO: " . $usuario;
 
 
-$sql = "SELECT usuario, password, tipo FROM usuarios";
+//$sql = "SELECT usuario, password, tipo FROM usuarios";
+//$conn->query($sql);
+//$result = $conn->query($sql);
 
-$conn->query($sql);
-
-$result = $conn->query($sql);
-
+/*
 $location = "index.html";
 
 if ($result->num_rows > 0) {
@@ -72,6 +45,7 @@ if ($result->num_rows > 0) {
     }
 
 }    
+*/
 
 header('Location:' . $location .'');
 
